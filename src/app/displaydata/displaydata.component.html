@@ -1,0 +1,49 @@
+<h4 class="text-muted pb-2"><span class="bold text-black">
+  <img
+    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAE/0lEQVRoge2aa2wVRRTHf/dKsUXLQ1shpTEWjeRiRRIfaNSg8RGshmiUaELEqB9MiR8Rie8oftCY+KJEoxgV8AvwRY1RiBoUNVEg4IO2IQralGKJCsVgC9j1wznrXLcze3f27lZj+Cebud0zc85/dmbOzDlTOI7/Fgo56JwFzAOuAJqAZn3fA/QBHwNvAztysJ0J2oCvgSDhsx247l9h6kAjsAFDsAdYDswFpgMn6TMdId6hdcL67wMNo846gpnAboRQH9AO1CRoVwMsAvZp2x+Ac3PiWBFnAP1K5FPgtBQ6TgU+Uh2/AGdlxi4hxgPfKYF1JBsFF8YC61XXN0B91ew88Lwa3obM/2pRB3ylOp9NoyCN+20BuoAi0Ap0O+pNAq4Hzta/u4H3gN8c9UuI1/tTf+9Owc0LK5Av97JDXgDuBw4x0uUOAEtwf8BXtF5HhnytKAJ71dgMR52VKj8CrEa80yJgjb4LEMI2tKq8l3w2678xWw3tcshvV/lexDVHMQtx0wGwwKHje5VfVBXTCrhbjbzqkHep/KoYHddqnZ0O+Wsqv8uHWNGnMnJ2AvniUbQgu3c38GGMjg3IiJaQvSiK3oitRPDtSKOW/RbZVC27Eujp1LLZIgt1e22wvh0Z1LLOIvtdywkJ9EzUcsAiC3UPWmRO+HYkNDzJIutEXO5s5OjhQgOykAewj17Y1rXfWOHbkZ+0tJ2JhhB3Wwe84NBdBF4EaoFViDuOItxAf/Tk5oXzifc4jUogAD4ALkXOYTX6e6PK9uA+uu/SOjb3nRnGIV/xGPbpBcZzuQKqTsxXj2IKMAwcRg6TuWKzEroppk4tcC/wCRJz7AM26bsTY9otUN0bM2FaAY+rsZdy0L1GdS/NQfcIXKjG9gNjMtRbCxxU3aUM9TpRQELTALg6Q703Y4Irb/i6X9TYW/r7njRGHWjXcnWGOitiKuK9jmI/ZviihPFWcZtpLliHjM4TGejqID5OyRVz1Hg/slDToh6zyM/LgFcq7FACd1ahY7Hq2JQJo5RYiEmwpdmJ6zG5sbYMeXnjBEx+q71CXRse0rafZUkqLW7BxOnjPNpNQLKLAXBlDry8UQC2IIQWe7Rbpm3iwuJRx1yE1AHkBFsJ05A9Yxi4OEdeqfAu0plVCeq+41F3VDAZSYvOQ6LGQeQrz4lpcwMm69gE3IqskZNzZRpBA5JvWouEvWGwdARJvoXz/lvsGfpaTAJuCXAN0vEACda2A8+Q43QrIbHCUBn5o0i0txZ4DLgE8Vp7cC/8RzFR4ljtyFNIWBxmIMNnGzLSmaAAPKKkA+BX4E1gPnJHYkO48A8BZ5a9LwF/INn2yx1tW5HALcxYBsDrVHf/AsjwB8hZ6GGSz+M3tN1mZNMcA3yp71YkaF9E0rPhrv+kF2sLelXRBZ7tTsFMlaWYHbwH90jaMBNzP1kVflZFC1O0bUMW8pA+w/hHlDdiTthV4T5VNIxMF9ediAvLMXP9OY92ExEPGDqXZZ52R6AAPIAs0pDQVuBB4DLiUzsgWccvgM+x54vLMQW4DQmjD5fZW0mCJEfSW6EWxHXO558HwyHEw3Rq2YfksPqRzXFAyYS2xiMdmoyEy83AOfpMi9jcgqyvXM5i9cAdSIKg/L8XsniOKfmnSZEurfae7nRk3cxA0qBNSP63Cel0AXOFcBBZaweQUduPnA52IinWrVrnOP4X+AurvmpAr6xZ7wAAAABJRU5ErkJggg==" />
+    {{selectedstate.region}}</span> Statistics</h4>
+
+<div class="row text-ceter  shadow-sm border rounded
+            justify-content-md-cente bg-white mt-3">
+  <div class="col col-md-6  ">
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Measure</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+      <tbody>
+
+        <tr>
+          <td>At Least One</td>
+          <td>{{selectedstate.atleast_one_measure}}</td>
+        </tr>
+        <tr>
+          <td>Immunization</td>
+          <td>{{selectedstate.immunization_measure}}</td>
+        </tr>
+        <tr>
+          <td>Reportable</td>
+          <td>{{selectedstate.reportable_lab_results_measure}}</td>
+        </tr>
+        <tr>
+          <td>Syndromic </td>
+          <td>{{selectedstate.syndromic_surveillance_measure}}</td>
+        </tr>
+        <tr>
+          <td>Regitry</td>
+          <td>{{selectedstate.registry_measure}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col col-md-6 ">
+<div style="display: block;">
+  <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+    [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+  </canvas>
+</div>
+
+  </div>
+</div>
